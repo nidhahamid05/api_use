@@ -1,0 +1,19 @@
+.char-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.char-list {
+  background-color: lightgray;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px gray;
+  text-align: center;
+}
+
+.char-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
