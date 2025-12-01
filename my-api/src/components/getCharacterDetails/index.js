@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import "./style.css";
 
 const GetCharacterInfo = () => {
-    const {id} = useParams();
+  const { id } = useParams();
   const [details, setDetails] = useState(null);
 
   useEffect(() => {
@@ -19,15 +19,15 @@ const GetCharacterInfo = () => {
 
   return <div>
     {details && (
-        <div className="details-container">
-            <h2>{details.name}</h2>
-            <img src={details.imageUrl} alt={details.name} />
-            <p>Films: {details.films.join(", ")}</p>
-            <p>TV Shows: {details.tvShows.join(", ")}</p>
-            <p>Video Games: {details?.videoGames?.length
-    ? details.videoGames.join(", ")
-    : "None"}</p>
-        </div>
+      <div className="details-container">
+        <h2>{details.name}</h2>
+        <img src={details.imageUrl} alt={details.name} />
+        <p>Films: {details.films.join(", ")}</p>
+        <p>TV Shows: {details?.tvShows?.length ? details.tvShows.join(", ") : "No TV shows"}</p>
+        <p>Video Games: {details?.videoGames?.length
+          ? details.videoGames.join(", ")
+          : "None"}</p>
+      </div>
     )}
   </div>;
 };

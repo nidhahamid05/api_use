@@ -3,6 +3,7 @@ import "./App.css";
 import GetCharacterInfo from "./components/getCharacterDetails";
 import GetCharacters from "./components/getCharcterList/getcharacters";
 
+
 function App() {
   return (
     <>
@@ -13,6 +14,9 @@ function App() {
           <Route path="/character/:id" element={<GetCharacterInfo />} />
         </Routes>
       </BrowserRouter>
+
+
+
     </>
   );
 }
